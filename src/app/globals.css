@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 56% 96%; /* Warm Beige (Lighter for page background) */
+    --foreground: 20 10% 25%; /* Dark, slightly warm gray for text */
+
+    --card: 0 0% 100%; /* White for cards */
+    --card-foreground: 20 10% 25%; /* Dark text on cards */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 25%;
+
+    --primary: 120 25% 65%; /* Earthy Green: #8FBC8F */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+
+    --secondary: 60 56% 90%; /* Warm Beige: #F5F5DC (for secondary elements) */
+    --secondary-foreground: 120 25% 25%; /* Darker Green text for contrast on secondary */
+
+    --muted: 0 0% 90%; /* Light Gray (derived from #D3D3D3 for muted backgrounds/elements) */
+    --muted-foreground: 0 0% 45%; /* Medium Gray for muted text */
+
+    --accent: 16 70% 62%; /* Terracotta: #E07A5F (for CTAs and highlights) */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 85%; /* Light Gray (for borders) */
+    --input: 0 0% 92%; /* Light Gray (for input backgrounds) */
+    --ring: 120 25% 55%; /* Earthy Green (darker primary for focus rings) */
+
+    --radius: 0.5rem;
+
+    /* Sidebar variables - will inherit theme but kept for completeness */
+    --sidebar-background: 60 50% 92%; /* Slightly darker beige for sidebar */
+    --sidebar-foreground: 20 10% 25%;
+    --sidebar-primary: 120 25% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 16 70% 58%; /* Slightly darker Terracotta for sidebar accent */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 80%;
+    --sidebar-ring: 120 25% 50%;
+  }
+
+  .dark {
+    /* Dark theme adjustments based on the new palette */
+    --background: 20 10% 10%; /* Very Dark Gray */
+    --foreground: 0 0% 95%; /* Off-white text */
+
+    --card: 20 10% 15%; /* Dark Gray for cards */
+    --card-foreground: 0 0% 95%;
+
+    --popover: 20 10% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 120 25% 55%; /* Earthy Green (adjusted for dark mode) */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 60 30% 20%; /* Dark Beige */
+    --secondary-foreground: 0 0% 85%; /* Lighter beige/gray text */
+
+    --muted: 0 0% 20%; /* Darker Muted Gray */
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 16 60% 55%; /* Terracotta (adjusted for dark mode) */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 20%;
+    --ring: 120 25% 45%; /* Earthy Green (darker ring for dark mode) */
+
+    /* Dark Sidebar variables */
+    --sidebar-background: 20 10% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 120 25% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 16 60% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 120 25% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Font family is handled by layout.tsx with CSS variables */
+  }
+}
